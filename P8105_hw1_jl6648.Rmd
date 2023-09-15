@@ -56,4 +56,4 @@ as.numeric(pull(problem2_df, vec_char))
 as.numeric(pull(problem2_df, vec_factor))
 ```
 
-it convert logical, character, and factor vector to numeric variables, which explains you can not take a mean of not numeric variable. 
+it convert logical, character, and factor vector to numeric variables because only numeric variable has the mean value, which explains you can not take a mean of not numeric variable. 
