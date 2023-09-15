@@ -5,7 +5,26 @@ author: Jixin Li
 date: "2023-09-15"
 ---
 
-```{r}
+## problem 1
 
+```{r}
+library(tidyverse)
 ```
 
+
+```{r}
+library(moderndive)
+data("early_january_weather")
+mean(early_january_weather$temp)
+ggplot(early_january_weather, aes(x = time_hour, y = temp, color = humid)) + geom_point()
+ggsave("early_january_weather.pdf")
+```
+
+description of the dataset:
+
+the dataset contains variables including origin, year, month, day, hour, temperature, dewp, humid, wind_dir, wind_speed, wind_gust, precipitation, visib,and time_hour. Among these variables, origin is the character variable, the rest of variables are all quantitative variable. 
+the dataset contains 358 number of rows and 15 number of columns 
+the mean of temperature is 39.58212. 
+
+description of the scatterplot:
+over the time, the temperature went up and down regularly. the overall trends of temperature went up starting from observation date to Jan 14, then the trend of temperature went down back to the temperature at the beginning. over the time, the humid gradually increase. 
