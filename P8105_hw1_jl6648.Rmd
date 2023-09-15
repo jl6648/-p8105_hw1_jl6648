@@ -28,3 +28,18 @@ the mean of temperature is 39.58212.
 
 description of the scatterplot:
 over the time, the temperature went up and down regularly. the overall trends of temperature went up starting from observation date to Jan 14, then the trend of temperature went down back to the temperature at the beginning. over the time, the humid gradually increase. 
+
+## problem 2 
+
+```{r}
+problem2_df=
+  tibble(
+    vec_numeric = rnorm(10),
+    vec_logical = vec_numeric > 0,
+    vec_char = c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j"),
+    vec_factor = factor(c("high", "medium", "low", "medium", "high", "low",
+                        "low", "medium", "high", "high")),
+  )
+```
+
+
