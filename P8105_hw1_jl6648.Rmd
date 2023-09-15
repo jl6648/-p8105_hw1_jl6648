@@ -49,3 +49,11 @@ mean(pull(problem2_df, vec_char))
 mean(pull(problem2_df, vec_factor))
 ```
 the mean of vec_numeric and vec_logical works. However, it is not working to take the mean of vec_char and vec_factor
+
+```{r}
+as.numeric(pull(problem2_df, vec_logical))
+as.numeric(pull(problem2_df, vec_char))
+as.numeric(pull(problem2_df, vec_factor))
+```
+
+it convert logical, character, and factor vector to numeric variables, which explains you can not take a mean of not numeric variable. 
