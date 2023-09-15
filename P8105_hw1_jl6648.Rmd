@@ -42,4 +42,10 @@ problem2_df=
   )
 ```
 
-
+```{r}
+mean(pull(problem2_df, vec_numeric))
+mean(pull(problem2_df, vec_logical))
+mean(pull(problem2_df, vec_char))
+mean(pull(problem2_df, vec_factor))
+```
+the mean of vec_numeric and vec_logical works. However, it is not working to take the mean of vec_char and vec_factor
