@@ -1,6 +1,6 @@
 ---
 title: "P8105_hw1_jl6648"
-output: html_document
+output: github_document
 author: Jixin Li
 date: "2023-09-15"
 ---
