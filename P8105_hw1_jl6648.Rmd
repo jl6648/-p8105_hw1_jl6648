@@ -13,11 +13,12 @@ library(tidyverse)
 
 
 ```{r}
-library(moderndive)
-data("early_january_weather")
-mean(early_january_weather$temp)
+library(moderndive)  #load moderndive 
+data("early_january_weather") #load data
+mean(early_january_weather$temp) #calculate the mean of temperature 
 ggplot(early_january_weather, aes(x = time_hour, y = temp, color = humid)) + geom_point()
-ggsave("early_january_weather.pdf")
+#use ggplot to create scatterplot
+ggsave("early_january_weather.pdf") #save the image of scatterplot 
 ```
 
 description of the dataset:
@@ -32,17 +33,20 @@ over the time, the temperature went up and down regularly. the overall trends of
 ## problem 2 
 
 ```{r}
+#use tibble to manipulate and print a dateframe
 problem2_df=
-  tibble(
-    vec_numeric = rnorm(10),
-    vec_logical = vec_numeric > 0,
+  tibble( 
+    vec_numeric = rnorm(10), #generate random number 
+    vec_logical = vec_numeric > 0, #generate a logical vector 
     vec_char = c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j"),
     vec_factor = factor(c("high", "medium", "low", "medium", "high", "low",
                         "low", "medium", "high", "high")),
   )
+#generate character and factor vector 
 ```
 
 ```{r}
+#use mean function to take mean of all variables 
 mean(pull(problem2_df, vec_numeric))
 mean(pull(problem2_df, vec_logical))
 mean(pull(problem2_df, vec_char))
@@ -51,6 +55,7 @@ mean(pull(problem2_df, vec_factor))
 the mean of vec_numeric and vec_logical works. However, it is not working to take the mean of vec_char and vec_factor
 
 ```{r}
+#use as.numeric function convert nonnumeric factor to numeric 
 as.numeric(pull(problem2_df, vec_logical))
 as.numeric(pull(problem2_df, vec_char))
 as.numeric(pull(problem2_df, vec_factor))
